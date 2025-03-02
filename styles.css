@@ -1,0 +1,49 @@
+body {
+  background: #7a7676;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.container {
+  background: rgb(88, 88, 255);
+  padding: 30px;
+  border-radius: 20px;
+  width: 25%;
+}
+
+.progressbar {
+  background: #c3bebe;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.progressbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5%;
+  background: rgb(0, 187, 0);
+  border-radius: 10px;
+  animation: name 1s normal 2s;
+}
+
+@keyframes name {
+  10% {
+    width: 10%;
+  }
+  40% {
+    width: 40%;
+  }
+  70% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
