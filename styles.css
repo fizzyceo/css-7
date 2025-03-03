@@ -4,46 +4,148 @@ body {
   height: 100vh;
   width: 100%;
   align-items: center;
-
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   justify-content: center;
+}
+h1,
+h2,
+p,
+img {
+  margin: 0;
+}
+/* .container1 {
+  background: rgb(88, 88, 255);
+  padding: 30px;
+  display: flex;
+  border-radius: 20px;
+  width: 25%;
+} */
+.container2 {
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.339);
+  padding: 20px;
+  width: 35%;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  background-color: greenyellow;
+  padding: 10px;
+  border-radius: 100%;
+}
+.prog {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.prog-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sent {
+  color: rgb(69, 69, 69);
+}
+.perc {
+  color: green;
+  font-weight: 600;
+}
+.progressbar {
+  background: #c3bebe;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.progressbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78%;
+  height: 100%;
+  border-radius: 10px;
+  background: green;
+  animation: ilyes 2s normal 1s;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tags-left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.tag {
+  background: rgb(220, 219, 219);
+  padding: 5px;
+
+  border-radius: 10px;
+}
+/* 
+@keyframes ilyes {
+  10% {
+    width: 10%;
+    top: -10px;
+    left: 40%;
+  }
+  40% {
+    width: 40%;
+    top: -5px;
+    left: 30%;
+  }
+  70% {
+    width: 70%;
+    top: -3px;
+    left: 20%;
+  }
+  100% {
+    width: 100%;
+    top: 0;
+    left: 0px;
+  }
 }
 
 .container {
   background: rgb(88, 88, 255);
   padding: 30px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 30px;
   border-radius: 20px;
   width: 25%;
 }
 
-.progressbar {
-  background: #c3bebe;
-  padding: 10px;
-  border-radius: 10px;
-  position: relative;
-}
-.progressbar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 5%;
-  background: rgb(0, 187, 0);
-  border-radius: 10px;
-  animation: name 1s normal 2s;
-}
-
-@keyframes name {
-  10% {
-    width: 10%;
-  }
-  40% {
-    width: 40%;
-  }
-  70% {
-    width: 70%;
-  }
-  100% {
-    width: 100%;
+@media screen and (min-width: 401px) and (max-width: 750px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (min-width: 0) and (max-width: 400px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
